@@ -17,10 +17,10 @@ app.get('/', (req, res) => {
 })
 
 // CONTROLLERS
-// const postsController = require('./controllers/posts_controller')
-// app.use('/posts', postsController)
-// const usersController = require('./controllers/users_controller')
-// app.use('/users', usersController)
+const postsController = require('./controllers/posts_controller')
+app.use('/posts', postsController)
+const usersController = require('./controllers/users_controller')
+app.use('/users', usersController)
 
 // LISTEN
 app.listen(process.env.PORT, () => {

@@ -1,40 +1,33 @@
 // DEPENDENCIES
 const users = require('express').Router()
 const db = require('../models')
-const { User } = db
-
-
-// FIND ALL Users
-users.get('/', async (req, res) => {
-    try {
-        const foundUsers = await User.findAll()
-        res.status(200).json(foundUsers)
-    } catch (error) {
-        res.status(500).json(error)
-    }
-})
+const { User, Post } = db
 
 // FIND A SPECIFIC Users
 users.get('/:id', async (req, res) => {
     try {
         const foundUser = await User.findOne({
-            where: { id: req.params.id }
+            where: { id: req.params.id },
         })
-        res.status(200).json(foundUser)
+        const posts = Post.findAll({
+            where: { userId: req.params.id }
+        })
+        res.status(200).json({ user: foundUser, posts })
     } catch (error) {
         res.status(500).json(error)
     }
 })
 
-// CREATE AUsers
+// CREATE Users
 users.post('/', async (req, res) => {
     try {
+        console.log(req.body)
         const newUser = await User.create(req.body)
         res.status(201).json({
             message: 'Successfully inserted a new User',
             data: newUser
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -50,7 +43,7 @@ users.put('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully updated ${updatedUsers} post(s)`
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -66,7 +59,7 @@ users.delete('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully deleted ${deletedUsers} post(s)`
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
