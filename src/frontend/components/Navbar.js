@@ -1,4 +1,3 @@
-import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -14,7 +13,7 @@ function Navbar() {
         <a class="nav-link" href="/home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/post">Post</a>
+        <a class="nav-link" href="/createpost">Create Post</a>
       </li>
     </ul>
   </div>
