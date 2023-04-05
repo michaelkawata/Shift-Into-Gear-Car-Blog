@@ -14,8 +14,10 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
 
 // CONTROLLERS
-// const postsController = require('./controllers/posts_controller')
-// app.use('/posts', postsController)
+
+const postsController = require('./controllers/posts_controller')
+app.use('/posts', postsController)
+
 const usersController = require('./controllers/users_controller')
 app.use('/users', usersController)
 
