@@ -18,7 +18,7 @@ users.get('/:id', async (req, res) => {
     }
 })
 
-// CREATE Users
+// CREATE AUsers
 users.post('/', async (req, res) => {
     try {
         console.log(req.body)
