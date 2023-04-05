@@ -11,13 +11,15 @@ const Post = () => {
       <div className='add'>
       <div className="content">
         <input type="text" placeholder='TITLE' />
+        <input type="text" placeholder='DATE' />
+        <input type="text" placeholder='URL' />
+      </div>
         <div className="editorContainer">
         <ReactQuill className="editor" theme="snow" value={value} onChange={setValue} />
         </div>
-        <button onClick={postMessage}>
+        <button>
         Post
         </button>
-      </div>
       </div>
     );
 }
