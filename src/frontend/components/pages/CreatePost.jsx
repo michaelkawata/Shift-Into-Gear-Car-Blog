@@ -30,9 +30,11 @@ export default function CreatePost() {
   //on change events for each of the data sets
     return (
       <div className='add'>
-            <h2>Get to blogging</h2>
+
+         <h2>Get to blogging</h2>
         {/* check on routes */}
       <form onSubmit={createNewPost} action="/posts" method="POST">
+
       <div className="content">
             <label htmlFor="title">TITLE:</label>
             <input
@@ -61,8 +63,9 @@ export default function CreatePost() {
       </div>
         <div className="editorContainer">
         <ReactQuill value={content} className="editor" theme="snow" onChange={newValue => setContent(newValue)} />
-                </div>
-              
+
+        </div>
+
         <button variant="primary" type="submit">
         Submit
         </button>
@@ -71,4 +74,6 @@ export default function CreatePost() {
       </div>
       
     );
+
 }
+

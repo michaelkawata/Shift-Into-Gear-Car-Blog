@@ -1,8 +1,9 @@
-import ReactQuill from 'react-quill';
+
 import React from 'react'
 import { useEffect, useState } from "react";
 
-export default function EditPost(data) {
+export default function EditPost() {
+
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [url, setUrl] = useState('');
@@ -26,6 +27,7 @@ export default function EditPost(data) {
     return (
         // *! check on the route
         <form onSubmit={updatePost} action={`/posts/${data.params.id}?_method=PUT`} method="POST">
+
             <div className="content">
                 <input
                     type="title"
@@ -58,4 +60,6 @@ export default function EditPost(data) {
         </form>
 
     );
+
 }
+

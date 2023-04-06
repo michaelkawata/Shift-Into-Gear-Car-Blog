@@ -1,38 +1,71 @@
-.App {
+
+.heading {
+  height: 126px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.image {
+  width: 100%;
+  height: 210px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* POST */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .content{
+      overflow-wrap: normal;
+      border: 2px solid black;
+      gap: 20px;
+      padding: 10px;
+      margin-top: 40px;
+      margin-left: 90px;
+      margin-right: 90px;
+      align-content: center;
+      border-radius: 15px;
+
+  }input{
+      padding: 10px;
+      border: 2px solid black;
+      margin-left: 20px;
+      margin-right: 20px;
+      border-radius: 15px;
   }
-  to {
-    transform: rotate(360deg);
+  /* BLOG POST BOX */
+  .editorContainer{
+      height: 100%;
+      overflow: scroll;
+      border: 2px solid black;
+      gap: 20px;
+      padding: 10px;
+      margin-left: 90px;
+      margin-right: 90px;
+      border-radius: 15px;
+
+  }.editor{
+      height: 300px;
+      overflow: scroll;
+      border: 1px solid black;
+      gap: 20px;
+      border-radius: 15px;
+      }
+  .item {
+      border: 1px solid black;
+      padding: 20px;
   }
-}
+
+  button {
+      background-color: lightgray; 
+      border: 1px solid black;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      width: 250px;
+      margin-left: 90px;
+      margin-top: 10px;
+      justify-content: right;
+      border-radius: 15px;
+    }
+  
+
