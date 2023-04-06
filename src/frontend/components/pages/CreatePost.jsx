@@ -4,6 +4,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useState } from 'react';
 
+//https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
 export default function CreatePost() {
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
@@ -12,19 +13,21 @@ export default function CreatePost() {
 
 
 //ERROR 404 - CREATE NEW ENDPOINT WITH BACKEND I.E app.post('/post, (req,red)
-  function createNewPost(ev) {
+  async function createNewPost(ev) {
     const data = new FormData();
     data.set('title', title);
     data.set('date', data);
     data.set('url', url);
     data.set('content', content);
     ev.preventDefault();
-    console.log(title);
+    // console.log(title);
     // fetch('http://localhost:3000/post', {
     //   method: 'POST',
     //   body: data,
     // })
   }
+  //used the backend models as reference 
+  //on change events for each of the data sets
     return (
       <div className='add'>
       <h2>Get to blogging</h2>
