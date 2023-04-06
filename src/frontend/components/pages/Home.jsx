@@ -1,9 +1,13 @@
-import React from 'react';
+import React from 'react'
+import '../../App.css';
 
-export const Home = () => {
+
+function Home() {
     return (
         <div>
-            Home page
+            Feed Page
         </div>
-    )
+    );
 }
+
+export default Home;
