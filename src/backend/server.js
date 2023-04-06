@@ -34,6 +34,10 @@ app.get('/home', (req, res) => {
     res.render('Home')
 })
 
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, '..', '..', 'dist', "index.html"));
+});
+
 // LISTEN
 app.listen(process.env.PORT, () => {
     console.log(`Talking shop on port: ${process.env.PORT}`)
