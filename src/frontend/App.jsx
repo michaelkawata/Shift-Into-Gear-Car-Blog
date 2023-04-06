@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
+import './components/Navbar.css';
+import Home from "./components/pages/Feed";
+import CreatePost from "./components/pages/CreatePost";
 
+
+//In react-router-dom v6, "Switch" is replaced by routes "Routes"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/home" element= {<Home />} />
+          <Route path="/createpost" element= {<CreatePost />} />
+        </Routes>
+        </Router>
+    </>
   );
 }
-
+  
 export default App;

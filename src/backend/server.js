@@ -14,7 +14,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
 
 // CONTROLLERS
-
 const postsController = require('./controllers/posts_controller')
 app.use('/posts', postsController)
 
@@ -26,4 +25,5 @@ app.listen(process.env.PORT, () => {
     console.log(`Talking shop on port: ${process.env.PORT}`)
     console.log(path.join(__dirname, 'dist'))
 })
+
 
