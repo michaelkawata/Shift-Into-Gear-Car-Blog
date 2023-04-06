@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../App.css';
-import { Container } from 'react-dom';
+
 
 
 
@@ -26,9 +26,9 @@ function Feed(data) {
 
     return (
       <div>
-        <Container>
+        
           {feedFormatted}
-        </Container>
+        
       </div>
     );
 }
