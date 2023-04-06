@@ -1,12 +1,18 @@
 import React from 'react'
 import '../../App.css';
+import Feed from './Feed';
 
 
-function Home() {
+
+
+function Home(data) {
+
+
     return (
-        <div>
-            Feed Page
-        </div>
+      <div>
+        <h1>Home </h1>
+        <Feed />
+      </div>
     );
 }
 
