@@ -1,8 +1,9 @@
 
 import React from 'react'
 import { useEffect, useState } from "react";
+import ReactQuill from 'react-quill';
 
-export default function EditPost() {
+export default function EditPost(data) {
 
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
