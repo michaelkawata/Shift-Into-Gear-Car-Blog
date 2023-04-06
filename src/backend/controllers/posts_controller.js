@@ -29,6 +29,7 @@ posts.get('/:id', async (req, res) => {
 // CREATE APosts
 posts.post('/', async (req, res) => {
     try {
+        console.log(req.body)
         const newPost = await Post.create(req.body)
         res.status(201).json({
             message: 'Successfully inserted a new Post',
@@ -37,7 +38,8 @@ posts.post('/', async (req, res) => {
     } catch (err) {
         res.status(500).json(err)
     }
-})
+}) 
+
 
 // UPDATE A Posts
 posts.put('/:id', async (req, res) => {
