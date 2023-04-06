@@ -3,8 +3,9 @@
     font-size: 1.9em;
 }
 .navbar .navbar-nav .nav-link:hover {
-  background-color: lightgrey;
-  color: black;
+  background-color: #1DA1F2;
+  border: 1px solid black;
+  color: white;
   border-radius: 30px;
 }
 .navbar-nav.navbar-center {
@@ -14,9 +15,12 @@
 }
 
 a.active, a:hover {
-  background-color: lightgrey;
-  color: black;
+  background-color: lightblue;
 }
 h1 {
     color: white;
+}
+h2 {
+  padding-top: 20px;
+  text-align: center;
 }

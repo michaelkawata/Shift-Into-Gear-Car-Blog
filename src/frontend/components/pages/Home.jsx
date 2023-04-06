@@ -1,17 +1,11 @@
 import React from 'react'
 import '../../App.css';
-import Feed from './Feed';
 
 
-
-
-function Home(data) {
-
-
+function Home() {
     return (
       <div>
-        <h1>Home </h1>
-        <Feed />
+          Must finished by tomorrow
       </div>
     );
 }
