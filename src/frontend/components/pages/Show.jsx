@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../App.css';
-import Feed from "./Feed"
+import Feed from "./Home"
 
 
 export default function Show(data) {
