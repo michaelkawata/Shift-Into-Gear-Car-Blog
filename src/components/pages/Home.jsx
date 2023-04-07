@@ -5,12 +5,11 @@ import Feed from './Feed';
 
 
 
-function Home(data) {
 
-
+function Home() {
     return (
       <div>
-        <h1>Home </h1>
+        <h1>Welcome to our Car Blog </h1>
         <Feed />
       </div>
     );

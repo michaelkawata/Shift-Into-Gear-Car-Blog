@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
@@ -14,6 +15,9 @@ function Navbar() {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/createpost">Create Post</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/createuser">Create User</a>
       </li>
     </ul>
   </div>
