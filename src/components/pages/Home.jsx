@@ -6,9 +6,12 @@ import Feed from './Feed';
 
 function Home(data) {
     return (
-      <div>
+      <div class="d-row">
         <h1 >Welcome to our Car Blog </h1>
+        <br/>
+        <div class="center">
         <Feed data={data} />
+        </div>
       </div>
     );
 }
