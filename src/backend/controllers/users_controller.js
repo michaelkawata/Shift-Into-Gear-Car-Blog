@@ -9,7 +9,7 @@ users.get('/:id', async (req, res) => {
         const foundUser = await User.findOne({
             where: { id: req.params.id },
         })
-        const posts = Post.findAll({
+        const posts = await Post.findAll({
             where: { userId: req.params.id }
         })
         res.status(200).json({ user: foundUser, posts })

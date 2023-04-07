@@ -11,9 +11,8 @@ module.exports = (sequelize, DataTypes) => {
         static associate(db) {
             const { Post } = db;
             User.hasMany(Post, {
-                foreignKey: 'user_id'
+                foreignKey: 'userId'
             });
-            Post.belongsTo(User)
         }
     }
     User.init({
@@ -29,7 +28,15 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        // createdAt: {
+        //     allowNull: false,
+        //     type: DataTypes.DATE
+        // },
+        // updatedAt: {
+        //     allowNull: false,
+        //     type: DataTypes.DATE
+        // }
     }, {
         sequelize,
         timestamps: false
