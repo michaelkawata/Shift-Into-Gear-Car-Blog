@@ -7,5 +7,17 @@
         "Bloggery",
         "createpost",
         "createuser"
+    ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "postgres",
+            "username": "postgres",
+            "password": "Ivyb4733!",
+            "database": "Car_blog"
+        }
     ]
 }

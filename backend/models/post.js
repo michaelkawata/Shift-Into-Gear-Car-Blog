@@ -42,10 +42,6 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.DATE
     },
-    image: {
-      allowNull: true,
-      type: DataTypes.BLOB
-    }
   }, {
     sequelize,
     modelName: 'Post',
