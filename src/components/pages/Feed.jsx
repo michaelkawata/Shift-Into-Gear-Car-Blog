@@ -1,6 +1,6 @@
 const Feed = (props) => {
 
-  const imgpost = {
+  const img = {
     'width': '300px',
     'height': '300px',
   }
@@ -16,7 +16,7 @@ const Feed = (props) => {
       <br />
         Date: {props.data.date}
       </p>
-      <img style={imgpost} src={props.data.imageURL} alt={props.data.title}/>
+      <img style={img} src={props.data.imageURL} alt={props.data.title}/>
       <div>
         <p>
           Body: {props.data.body}
