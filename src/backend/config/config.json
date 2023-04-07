@@ -18,7 +18,6 @@
     "password": "HEHWZwiY9cNbCufKLyQUb8mC0UebhwY0",
     "database": "car_blog",
     "host": "dpg-cgo8atgu9tun42vvkjb0-a.oregon-postgres.render.com",
-    "dialect": "postgres",
-    "ssl": "true"
+    "dialect": "postgres"
   }
 }

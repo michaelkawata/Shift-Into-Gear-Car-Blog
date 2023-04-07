@@ -27,11 +27,11 @@
     "webpack": "^5.77.0"
   },
   "scripts": {
-    "start": "node src/backend/server.js",
+    "start": "NODE_ENV=production node src/backend/server.js",
     "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "migrate": "PGSSLMODE=require cd src/backend && sequelize db:migrate --env production",
+    "migrate": "cd src/backend && sequelize db:migrate --env production",
     "watch": "npm-watch",
     "dev": "concurrently \"node src/backend/server.js\" \"webpack --watch\""
   },
