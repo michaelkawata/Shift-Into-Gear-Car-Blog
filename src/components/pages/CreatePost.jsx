@@ -37,7 +37,9 @@ async function createNewPost(ev) {
         <h2>Create New Post</h2>
         {/*  adding routes */}
       <form onSubmit={createNewPost} action="/posts" method="POST">
-      <div className="content">
+          <div className="content">
+            <div className='d-flex'>
+              <div>
             <label htmlFor="title">TITLE:</label>
             <br/>
             <input
@@ -47,7 +49,8 @@ async function createNewPost(ev) {
             value={title}
             onChange={ev => setTitle(ev.target.value)}
             />
-            <br/>
+            </div> 
+            <div>               
             <label htmlFor="title">DATE:</label>
             <br/>
             <input
@@ -57,6 +60,8 @@ async function createNewPost(ev) {
             value={date}
             onChange={ev => setDate(ev.target.value)}
             />
+            </div>
+            </div>
             <br/>
             <label htmlFor="title">URL:</label>
             <br/>

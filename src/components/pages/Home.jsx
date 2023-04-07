@@ -9,7 +9,7 @@ function Home(data) {
       <div class="d-row">
         <h1 >Welcome to our Car Blog </h1>
         <br/>
-        <div className="center">           
+        <div className="center d-row">           
             {
                 // creating a map
                 Post.postings.map((data, i) => {
