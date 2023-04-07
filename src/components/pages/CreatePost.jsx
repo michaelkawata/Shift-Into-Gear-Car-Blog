@@ -34,7 +34,7 @@ async function createNewPost(ev) {
   //on change events for each of the data sets
     return (
       <div className='add'>
-      <h2>Get to blogging</h2>
+      <h2>Create New Post</h2>
       <form onSubmit={createNewPost}>
       <div className="content">
             <label htmlFor="title">TITLE:</label>

@@ -5,7 +5,6 @@ import './App.css';
 import './components/Navbar.css';
 import Home from "./components/pages/Home";
 import CreatePost from "./components/pages/CreatePost";
-import EditPost from "./components/pages/EditPost";
 import CreateUser from "./components/pages/CreateUser";
 
 
@@ -18,9 +17,9 @@ function App() {
         <Routes>
           <Route path="/home" element= {<Home />} />
           <Route path="/createpost" element={<CreatePost />} />
-          <Route path="/createuser" element= {<CreateUser />} />
+          <Route path="/createuser" element={<CreateUser />} />
         </Routes>
-        </Router>
+      </Router>
     </>
   );
 }
