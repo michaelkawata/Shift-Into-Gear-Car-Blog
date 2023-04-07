@@ -1,14 +1,26 @@
 // DEPENDENCIES
 const posts = require('express').Router()
 const db = require('../models')
-const { Post } = db
+const { Post, User } = db
 
 
 // FIND ALL Posts
 posts.get('/', async (req, res) => {
     try {
-        const foundPosts = await Post.findAll()
-        res.status(200).json(foundPosts)
+        const result = [];
+        const foundPosts = await Post.findAll();
+        for (let i = 0; i < foundPosts.length; i++) {
+            const user = await User.findOne({
+                where: { id: foundPosts[i].userId },
+            });
+            result.push(
+                {
+                    post: foundPosts[i],
+                    user: user
+                }
+            );
+        }
+        res.status(200).json(result)
     } catch (error) {
         res.status(500).json(error)
     }
@@ -38,7 +50,7 @@ posts.post('/', async (req, res) => {
     } catch (err) {
         res.status(500).json(err)
     }
-}) 
+})
 
 
 // UPDATE A Posts

@@ -4,33 +4,32 @@ import '../../App.css';
 
 
 
-function Feed(data) {
-  let feedFormatted = data.posts.map((post) => {
-    return (
-      <div  className="">
-        <h2>
-          <a className="" href={`/places/${post.id}`}>
-            {post.title} 
-          </a>
-        </h2>
-        <p>
-          {post.name}
-        </p>
-        <img className="" src={post.pic} alt={post.name} /> 
-        <div>
-          {post.body}
-        </div>
-      </div>       
-    )
-  })
-
-    return (
+function Feed({ post, user }) {
+  console.log('feed', post, user);
+  let feedFormatted = (
+    <div className="">
+      <h2>
+        <a className="" href={`/places/${post.id}`}>
+          {post.title}
+        </a>
+      </h2>
+      <p>
+        {user.username}
+      </p>
+      <img className="" src={post.pic} alt={post.name} />
       <div>
-        
-          {feedFormatted}
-        
+        {post.body}
       </div>
-    );
+    </div>
+  );
+
+  return (
+    <div>
+
+      {feedFormatted}
+
+    </div>
+  );
 }
 
 export default Feed;

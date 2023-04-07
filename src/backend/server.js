@@ -29,9 +29,9 @@ app.use('/posts', postsController)
 const usersController = require('./controllers/users_controller')
 app.use('/users', usersController)
 
-app.get('/home', (req, res) => {
-    res.render('Home')
-})
+// app.get('/home', (req, res) => {
+//     res.render('Home')
+// })
 
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, '..', '..', 'dist', "index.html"));
