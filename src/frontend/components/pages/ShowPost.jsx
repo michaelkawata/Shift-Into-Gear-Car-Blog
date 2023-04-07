@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import '../../App.css';
-import Feed from "./Home"
 import { useParams, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
+import ReactQuill from 'react-quill';
 
 
 export default function ShowPost() {
@@ -29,9 +29,11 @@ export default function ShowPost() {
           <div className="edit-delete">
             <div className="p-2">
               <div>{post.title}</div>
-              <input value={value} onChange={(e) => {
-                setValue(e.target.value)
-              }} />
+              <div className="editorContainer">
+                <ReactQuill value={value} className="editor" theme="snow" onChange={(e) => {
+                  setValue(e)
+                }} />
+              </div>
               {/* working on the routes at */}
               <button className="btn btn-primary" onClick={() => {
                 fetch(`/api/posts/${id}`, {
