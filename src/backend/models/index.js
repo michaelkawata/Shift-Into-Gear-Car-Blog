@@ -13,7 +13,14 @@ let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config);
+  sequelize = new Sequelize(
+    process.env.DATABASE || config.database,
+    process.env.USERNAME || config.username,
+    process.env.PASSWORD || config.password,
+    {
+      host: process.env.HOST || config.host,
+      dialect: process.env.DIALECT || config.dialect
+    });
 }
 
 fs
