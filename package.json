@@ -27,7 +27,7 @@
     "webpack": "^5.77.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node src/backend/server.js",
+    "start": "PGSSLMODE=require NODE_ENV=production node src/backend/server.js",
     "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
