@@ -68,6 +68,7 @@ posts.delete('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully deleted ${deletedPosts} post(s)`
         })
+        res.redirect('/posts')
     } catch (err) {
         res.status(500).json(err)
     }

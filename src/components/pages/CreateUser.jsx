@@ -15,7 +15,8 @@ export default function CreateUser() {
         return (
             <div className='add'>
                 <h2>Create User</h2>
-                <form onSubmit={createNewUser} >
+                 {/* adding routes */}
+                <form onSubmit={createNewUser} action="/users" method="POST">
                     <div className="content">
                         <label htmlFor="username">Username:</label>
                         <input

@@ -2,7 +2,7 @@ import { useState} from "react";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
-export default function EditPost() {
+export default function EditPost(data) {
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [url, setUrl] = useState('');
@@ -24,7 +24,8 @@ export default function EditPost() {
 }
 //possible reponse await fetch inserted here.(method, body,)???
     return (
-        <form onSubmit={updatePost}>
+        // ! {/*  adding routes */}
+        <form onSubmit={updatePost} action={`/posts/${data.params.id}?_method=PUT`} method="POST">
         <div className="content">
               <input
               type="title"
