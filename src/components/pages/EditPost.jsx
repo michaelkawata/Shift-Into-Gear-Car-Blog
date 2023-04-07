@@ -1,4 +1,6 @@
-import {useEffect, useState} from "react";
+import { useState} from "react";
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 export default function EditPost() {
     const [title, setTitle] = useState('');

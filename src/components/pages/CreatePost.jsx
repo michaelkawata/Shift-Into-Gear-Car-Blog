@@ -21,11 +21,11 @@ async function createNewPost(ev) {
     data.set('title', title);
     data.set('date', data);
     data.set('url', url);
-    data.set('file', );
+    data.set('file', files[0]);//[0] grabs the first file  someone selects
     data.set('content', content);
     ev.preventDefault();
-    // console.log(title);
-    // fetch('http://localhost:3000/createpost', {
+    // console.log(files);
+    // fetch('http://localhost:3000/post', {
     //   method: 'POST',
     //   body: data,
     // })
