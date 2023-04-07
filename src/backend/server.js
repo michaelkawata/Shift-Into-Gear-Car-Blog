@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 // DEPENDENCIES
 const express = require('express')
 const app = express()
@@ -6,7 +8,7 @@ require("./models")
 const path = require('path')
 
 // CONFIGURATION / MIDDLEWARE
-require('dotenv').config()
+
 app.use(express.json())
 // app.use(express.urlencoded({ extended: false }))
 

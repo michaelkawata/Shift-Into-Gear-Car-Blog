@@ -1,7 +1,8 @@
 import React from 'react'
 import '../../App.css';
 import { Link } from 'react-router-dom'
-
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.bubble.css';
 
 
 
@@ -15,11 +16,11 @@ function Feed({ post, user }) {
         </Link>
       </h2>
       <p>
-        {user.username}
+        {user.username} User-Id: {user.id}
       </p>
       <img className="" src={post.pic} alt={post.name} />
-      <div>
-        {post.body}
+      <div class="editorContainer">
+        <ReactQuill value={post.body} class="editor" readOnly={true} theme={"bubble"} />
       </div>
     </div>
   );
