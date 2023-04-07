@@ -27,7 +27,7 @@
     "webpack": "^5.77.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node src/backend/server.js",
     "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
