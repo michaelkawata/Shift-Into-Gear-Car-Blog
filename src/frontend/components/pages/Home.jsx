@@ -6,7 +6,7 @@ import Feed from './Feed';
 
 function Home() {
   async function getAllPosts() {
-    await fetch('/posts')    // call the request
+    await fetch('/api/posts')    // call the request
       .then(res => res.json()) // turn the Promise into actual json 
       .then(result => {         // result === the actual json
         console.log('postpost', result);

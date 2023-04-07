@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../App.css';
+import { Link } from 'react-router-dom'
 
 
 
@@ -9,9 +10,9 @@ function Feed({ post, user }) {
   let feedFormatted = (
     <div className="">
       <h2>
-        <a className="" href={`/places/${post.id}`}>
+        <Link to={`/posts/${post.id}`}>
           {post.title}
-        </a>
+        </Link>
       </h2>
       <p>
         {user.username}

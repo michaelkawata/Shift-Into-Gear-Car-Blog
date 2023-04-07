@@ -1,25 +1,27 @@
 .navbar .navbar-nav .nav-link {
-    color: white;
-    font-size: 1.9em;
+  color: white;
+  font-size: 1.9em;
 }
+
 .navbar .navbar-nav .nav-link:hover {
   background-color: #1DA1F2;
   border: 1px solid black;
   color: white;
   border-radius: 30px;
 }
+
 .navbar-nav.navbar-center {
-    position: fixed;
-    left: 50%;
-    transform: translatex(-50%);
+  position: fixed;
+  left: 50%;
+  transform: translatex(-50%);
 }
 
-a.active, a:hover {
+a.active,
+a:hover {
   background-color: lightblue;
+  border-radius: 10px;
 }
-h1 {
-    color: white;
-}
+
 h2 {
   padding-top: 20px;
   text-align: center;

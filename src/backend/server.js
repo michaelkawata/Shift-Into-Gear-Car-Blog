@@ -24,10 +24,10 @@ app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
 
 // CONTROLLERS
 const postsController = require('./controllers/posts_controller')
-app.use('/posts', postsController)
+app.use('/api/posts', postsController)
 
 const usersController = require('./controllers/users_controller')
-app.use('/users', usersController)
+app.use('/api/users', usersController)
 
 // app.get('/home', (req, res) => {
 //     res.render('Home')

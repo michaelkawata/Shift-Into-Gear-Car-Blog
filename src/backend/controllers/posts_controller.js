@@ -56,6 +56,7 @@ posts.post('/', async (req, res) => {
 // UPDATE A Posts
 posts.put('/:id', async (req, res) => {
     try {
+        console.log(req.body)
         const updatedPosts = await Post.update(req.body, {
             where: {
                 id: req.params.id
