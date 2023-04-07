@@ -16,10 +16,9 @@ border-radius: 30px;
 
 a.active, a:hover {
 background-color: lightblue;
+border-radius: 10px;
 }
-h1 {
-  color: white;
-}
+
 h2 {
 padding-top: 20px;
 text-align: center;

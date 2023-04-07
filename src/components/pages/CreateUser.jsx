@@ -13,12 +13,13 @@ export default function CreateUser() {
         ev.preventDefault();
     }
         return (
-            <div className='add'>
+            <div className='add d-row'>
                 <h2>Create User</h2>
                  {/* adding routes */}
                 <form onSubmit={createNewUser} action="/users" method="POST">
                     <div className="content">
-                        <label htmlFor="username">Username:</label>
+                        <label htmlFor="username">Username: </label>
+                        <br/>
                         <input
                             type="text"
                             placeholder='Username'
@@ -26,11 +27,10 @@ export default function CreateUser() {
                             value={username}
                             onChange={ev => setUsername(ev.target.value)}
                         />
-            
-                    </div>
-                    <button variant="primary" type="submit">
+                    <button class="btn btn-success" variant="primary" type="submit">
                         Submit Username
                     </button>
+                    </div> 
                 </form>
         
             </div>

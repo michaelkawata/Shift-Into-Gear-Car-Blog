@@ -20,9 +20,7 @@ const Feed = (data) => {
     <div >
        {/* {postsFormatted} */}
       {/* <img src={data.posts.img} alt={data.posts.title} /> */}
-      <a >
       <h1>Title: </h1>
-      </a>
           <p>username:</p>
           <p>Date: </p>
       <div>

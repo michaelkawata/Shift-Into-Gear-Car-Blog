@@ -33,28 +33,33 @@ async function createNewPost(ev) {
   //used the backend models as reference 
   //on change events for each of the data sets
     return (
-      <div className='add'>
+      <div className='add d-row'>
         <h2>Create New Post</h2>
         {/*  adding routes */}
       <form onSubmit={createNewPost} action="/posts" method="POST">
       <div className="content">
             <label htmlFor="title">TITLE:</label>
+            <br/>
             <input
             type="text"
             placeholder='Title'
             id="title"
             value={title}
             onChange={ev => setTitle(ev.target.value)}
-         />
+            />
+            <br/>
             <label htmlFor="title">DATE:</label>
+            <br/>
             <input
             type="text"
             placeholder='Date'
             id="date"
             value={date}
             onChange={ev => setDate(ev.target.value)}
-         />
+            />
+            <br/>
             <label htmlFor="title">URL:</label>
+            <br/>
             <input
             type="text"
             placeholder='insert https://'
@@ -70,10 +75,10 @@ async function createNewPost(ev) {
       </div>
         <div className="editorContainer">
         <ReactQuill value={content} className="editor" theme="snow" onChange={newValue => setContent(newValue)} />
-        </div>
-        <button variant="primary" type="submit">
+        <button class="btn btn-success center" variant="primary" type="submit">
         Submit
         </button>
+        </div>
         </form>
         
       </div>
