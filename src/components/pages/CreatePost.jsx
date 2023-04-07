@@ -24,14 +24,15 @@ async function createNewPost(ev) {
     data.set('file', files[0]);//[0] grabs the first file  someone selects
     data.set('content', content);
     ev.preventDefault();
-    // console.log(files);
-    // fetch('http://localhost:3000/post', {
-    //   method: 'POST',
-    //   body: data,
-    // })
+    console.log();
+
+    fetch('http://localhost:3001/post', {
+      method: 'POST',
+      body: data,
+    })
   }
   //used the backend models as reference 
-  //on change events for each of the data sets
+  //on change events for each of the hooks 
     return (
       <div className='add'>
       <h2>Get to blogging</h2>
@@ -78,5 +79,4 @@ async function createNewPost(ev) {
       </div>
       
     );
-}
- 
+    }

@@ -27,7 +27,7 @@ posts.get('/:id', async (req, res) => {
 })
 
 // CREATE APosts
-posts.post('/', async (req, res) => {
+posts.post('/post', async (req, res) => {
     try {
         console.log(req.body)
         const newPost = await Post.create(req.body)

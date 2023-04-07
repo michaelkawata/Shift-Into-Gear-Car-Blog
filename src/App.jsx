@@ -8,6 +8,7 @@ import CreatePost from "./components/pages/CreatePost";
 import EditPost from "./components/pages/EditPost";
 
 
+
 //In react-router-dom v6, "Switch" is replaced by routes "Routes"
 function App() {
   return (

@@ -5,7 +5,7 @@ import '../../App.css';
 function Home() {
     return (
       <div>
-          
+          Must finished by tomorrow
       </div>
     );
 }
