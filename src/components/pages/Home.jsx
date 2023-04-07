@@ -3,14 +3,11 @@ import '../../App.css';
 import Feed from './Feed';
 
 
-
-
-
-function Home() {
+function Home(data) {
     return (
       <div>
         <h1>Welcome to our Car Blog </h1>
-        <Feed />
+        <Feed data={data} />
       </div>
     );
 }
