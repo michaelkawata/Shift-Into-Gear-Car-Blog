@@ -3,6 +3,7 @@ import '../../App.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 //https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
 export default function CreatePost() {
@@ -12,6 +13,7 @@ export default function CreatePost() {
   const [url, setUrl] = useState('');
   const [files, setFiles] = useState('');
   const [body, setContent] = useState('');
+  const navigate = useNavigate()
 
 
   //ERROR 404 - CREATE NEW ENDPOINT WITH BACKEND I.E app.post('/post, (req,red)
@@ -72,6 +74,7 @@ export default function CreatePost() {
             .then(res => res.json())
             .then(data => {
               console.log(data)
+              navigate('/')
             })
         }}>
           Submit
