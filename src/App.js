@@ -10,6 +10,7 @@ import CreateUser from "./components/pages/CreateUser";
 
 //In react-router-dom v6, "Switch" is replaced by routes "Routes"
 function App() {
+  
   return (
     <>
       <Router>

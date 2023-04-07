@@ -1,7 +1,17 @@
 const Feed = (props) => {
 
+  const styleFeed = {
+    'width': 'auto',
+    'height': 'auto',
+    'border': '1px solid black',
+    'border-radius': '10px', 
+    'margin': '2px',
+    'text-align': 'center',
+    'justify-content': 'center'
+  }
+
   return (
-    <div >
+    <div style={styleFeed}>
        
       <h1>Title: {props.data.title}</h1>
           
