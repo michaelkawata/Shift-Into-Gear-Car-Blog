@@ -10,12 +10,6 @@ export default function CreateUser() {
     const [password, setUserPassword] = useState('');
     const navigate = useNavigate()
 
-    async function createNewUser(ev) {
-        const data = new FormData();
-        data.set('username', username);
-        data.set('password', password);
-        ev.preventDefault();
-    }
     return (
         <div className='add d-row'>
             <h2>Create User</h2>

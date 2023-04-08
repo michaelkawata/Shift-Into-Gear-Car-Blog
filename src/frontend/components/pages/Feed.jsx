@@ -16,7 +16,10 @@ function Feed({ post, user }) {
         </Link>
       </h2>
       <p>
-        {user.username} User-Id: {user.id}
+        {user.username}      User-Id: {user.id}
+      </p>
+      <p>
+        Date: {post.date}
       </p>
       <img className="" src={post.pic} alt={post.name} />
       <div class="editorContainer">
