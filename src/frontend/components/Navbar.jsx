@@ -9,7 +9,7 @@ function Navbar() {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       {/* add route to home for final submission */}
 
-      <a class="nav-link text-primary" href="/"><h1>Car Bloggery</h1></a>
+      <a class="nav-link text-primary" href="/"><h1>Shift Into Gear</h1></a>
 
 
       <div class="fluid navbar-fluid" id="navbarNav">
