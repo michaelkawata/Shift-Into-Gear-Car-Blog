@@ -32,13 +32,28 @@ async function createNewPost(ev) {
   }
   //used the backend models as reference 
   //on change events for each of the data sets
+
+  const stylePost = {
+    'width': 'auto',
+    'height': 'auto',
+    'border': '1px solid gray',
+    'border-radius': '10px', 
+    'margin': '2px',
+    'text-align': 'left',
+    'background': 'black',
+    'color': 'white',
+    'display' : 'flex',
+    'justify-content': 'center',
+    
+  }
+
     return (
       <div className='add d-row'>
         <h2>Create New Post</h2>
         {/*  adding routes */}
       <form onSubmit={createNewPost} action="/posts" method="POST">
-          <div className="content">
-            <div className='d-flex'>
+          <div className="content" style={stylePost}>
+            <div className='d-flex mb-2'>
               <div>
             <label htmlFor="title">TITLE:</label>
             <br/>
@@ -62,7 +77,8 @@ async function createNewPost(ev) {
             />
             </div>
             </div>
-            <br/>
+            <div>
+            <div>
             <label htmlFor="title">URL:</label>
             <br/>
             <input
@@ -71,14 +87,17 @@ async function createNewPost(ev) {
             id="url"
             value={url}
             onChange={ev => setUrl(ev.target.value)}
-         />
+            />
+            
          <label></label>
             <input
             type="file"
             onChange={ev => setFiles(ev.target.files)}
-         />
+            />
+            </div>
+            </div>
       </div>
-        <div className="editorContainer">
+        <div className="editorContainer" >
         <ReactQuill value={content} className="editor" theme="snow" onChange={newValue => setContent(newValue)} />
         <button class="btn btn-success center" variant="primary" type="submit">
         Submit
