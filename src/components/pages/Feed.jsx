@@ -3,10 +3,12 @@ const Feed = (props) => {
   const styleFeed = {
     'width': 'auto',
     'height': 'auto',
-    'border': '1px solid black',
+    'border': '1px solid gray',
     'border-radius': '10px', 
     'margin': '2px',
     'text-align': 'center',
+    'background': 'black',
+    'color': 'white',
     'justify-content': 'center'
   }
 

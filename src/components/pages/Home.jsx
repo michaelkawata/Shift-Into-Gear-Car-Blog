@@ -5,12 +5,21 @@ import Feed from './Feed';
 const Post = require('../../postings')
 
 function Home({ data, user, post }) {
- 
+  const styleHome = {
+    'width': 'auto',
+    'height': 'auto',
+    'border': '2px solid blue',
+    'border-radius': '10px', 
+    'margin': '2px',
+    'text-align': 'center',
+    'background': 'black',
+    'color': 'white',
+    'justify-content': 'center'
+  } 
 
     return (
-      <div  class="d-row">
+      <div style={styleHome} class="d-row">
         <h1 >Welcome to our Car Blog </h1>
-        <h6>Username</h6>
         <ul>
           {/* {user.map(user => (
             <li key={user.id}>
