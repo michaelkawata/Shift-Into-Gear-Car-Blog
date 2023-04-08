@@ -42,6 +42,7 @@ export default function ShowPost() {
                   .then(res => res.json())
                   .then(data => {
                     console.log(data)
+                    navigate('/')
                   })
               }}>
                 Save
