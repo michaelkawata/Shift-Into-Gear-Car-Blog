@@ -1,12 +1,14 @@
 import { useState } from "react";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { useNavigate } from 'react-router-dom'
 
 export default function EditPost() {
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [url, setUrl] = useState('');
     const [content, setContent] = useState('');
+    const navigate = useNavigate()
 
     //fetch to port??
 
@@ -20,7 +22,7 @@ export default function EditPost() {
         fetch('/api/posts', {
             method: 'PUT',
             body: data,
-        })
+        }).then(res => res.json()).then(() => navigate('/'))
     }
     //possible reponse await fetch inserted here.(method, body,)???
     return (
